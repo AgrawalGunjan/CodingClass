@@ -1,12 +1,31 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cloudflare Pages Demo</title>
-</head>
-<body>
-    <h1>This is demo site for geeksforgeeks article on cloudflare pages</h1>
-</body>
+<html>
+    <head>
+        <title>Happy Diwali</title>
+    </head>
+    <body style="background-color: #ffff00; text-align: center;">
+        <div id="username">
+                  <input id="name" name="name" placeholder="Please enter your name " />
+                <button onclick="ShowGreeting();">See Greeting</button>
+        </div>
+        <div id="greeting" style="display: none;">
+        <h1 style="color: #ff0000; background-color: #9acd32;">Happy Diwali to <span id="user">you</span></h1>
+        <img src="https://media.giphy.com/media/4yG81YiQRjSstxVugY/giphy.gif" height="370px"/>
+        <p style="font-size: 19px; color: #ff0000;">
+            Let's fill our homes
+            with prayers and</br>
+            lights, not with</br>
+            fumes and crackers.</br>
+            Once Again, Happy Diwali.
+        </p>
+        <h2 style="color: blue; text-align: end; padding-top: 30px;"><em>From Kashika</em></h2>
+        </div>
+        <script>
+            function ShowGreeting(){
+                document.getElementById("username").style.display="none";
+                document.getElementById("user").innerText=document.getElementById("name").value;
+                document.getElementById("greeting").style.display="block";
+            }
+        </script>
+    </body>
 </html>
